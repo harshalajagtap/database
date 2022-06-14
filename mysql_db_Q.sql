@@ -10,3 +10,4 @@ create table new_table1 as select * from emp_basic_details;
 SELECT * FROM employee_position WHERE Salary BETWEEN '50000' and '100000';
 select * from emp_basic_details where EmpFname like 'S%';
 SELECT * FROM  employee_position ORDER BY Salary DESC limit N;
+SELECT CONCAT(EmpFname, ' ', EmpLname) AS 'FullName' FROM emp_basic_details;
