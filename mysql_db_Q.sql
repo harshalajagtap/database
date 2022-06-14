@@ -8,3 +8,5 @@ select substring(EmpLname,1,4) from empolyee.emp_basic_details;
 SELECT MID(Address,1,LOCATE('(',Address) )FROM empolyee.emp_basic_details;
 create table new_table1 as select * from emp_basic_details;
 SELECT * FROM employee_position WHERE Salary BETWEEN '50000' and '100000';
+select * from emp_basic_details where EmpFname like 'S%';
+SELECT * FROM  employee_position ORDER BY Salary DESC limit N;
