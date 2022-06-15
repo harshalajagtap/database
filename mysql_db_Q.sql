@@ -12,3 +12,4 @@ select * from emp_basic_details where EmpFname like 'S%';
 SELECT * FROM  employee_position ORDER BY Salary DESC limit N;
 SELECT CONCAT(EmpFname, ' ', EmpLname) AS 'FullName' FROM emp_basic_details;
 select * from emp_basic_details order by Department asc, EmpFname desc;
+select count(*),Gender from emp_basic_details where DOB between '02/05/1970 'AND '31/12/1975' GROUP BY Gender;
