@@ -14,3 +14,5 @@ SELECT CONCAT(EmpFname, ' ', EmpLname) AS 'FullName' FROM emp_basic_details;
 select * from emp_basic_details order by Department asc, EmpFname desc;
 select count(*),Gender from emp_basic_details where DOB between '02/05/1970 'AND '31/12/1975' GROUP BY Gender;
 select * from emp_basic_details where EmpLname like '%a';
+select * from emp_basic_details where EmpFname not in('Sanjay','Sonia');
+select * from emp_basic_details where Address like 'Delhi(DEL)%';
