@@ -52,4 +52,34 @@ INTERSECT
 SELECT * FROM title;
 
 select * from worker order by SALARY desc limit 10;
-SELECT Salary FROM Worker ORDER BY Salary DESC LIMIT n-1,1;
+SELECT salary 
+FROM worker
+ORDER BY SALARY asc
+LIMIT 3, 1;
+
+select * from worker order by SALARY desc;
+select * from worker order by SALARY asc;
+
+SELECT min(Salary)
+FROM (
+    SELECT Salary
+    FROM worker
+    ORDER BY SALARY DESC
+    LIMIT 3
+) AS TopThreeSalary;
+
+select max(SALARY) from worker;
+select max(SALARY)from worker where salary not in (select max(SALARY)from worker);
+
+select First_Name,DEPARTMENT from worker W where W.DEPARTMENT = 'HR'
+union all
+select First_Name,DEPARTMENT from worker w1 where w1.DEPARTMENT='HR';
+select * from worker where WORKER_ID<=(select count(WORKER_ID/2)from worker);
+
+select DEPARTMENT,count(WORKER_ID) as 'number of worker' from worker group by DEPARTMENT having count(WORKER_ID) <5;
+
+select DEPARTMENT,count(DEPARTMENT) as 'number of worker' from worker group by DEPARTMENT;
+select * from worker where WORKER_Id=(select max(WORKER_ID) from worker);
+select * from worker where WORKER_Id=(select min(WORKER_ID) from worker);
+SELECT FIRST_NAME, SALARY from Worker WHERE SALARY=(SELECT max(SALARY) from Worker);
+
