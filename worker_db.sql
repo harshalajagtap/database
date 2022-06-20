@@ -7,3 +7,7 @@ select rtrim(First_name) from worker;
 select ltrim(DEPARTMENT) from worker;
 select distinct length(DEPARTMENT) from worker;
 select replace(First_name,'a','A') from worker;
+select concat(First_name,' ',Last_name) as fullname from worker;
+select * from worker order by First_name asc;
+select * from worker  order by DEPARTMENT desc;
+select * from worker where First_name in('Vipul','Satish');
